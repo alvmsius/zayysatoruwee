@@ -1,0 +1,313 @@
+/* Header modern dengan background gradient + efek blur */
+.hero-header {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Efek teks masuk */
+.animated-title {
+  font-size: 3em;
+  margin-bottom: 15px;
+  animation: slideIn 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* Nav menu styling */
+.nav-menu a {
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover effect: underline animasi */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ffd700;
+  transition: 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+.nav-menu a:hover {
+  color: #ffd700;
+  transform: scale(1.05);
+}
+
+/* Keyframe untuk teks masuk */
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #333;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+.animated-img {
+  width: 800px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.animated-img.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efek bayangan untuk gambar */
+.animated-img {
+  width: 800px;
+  border-radius: 50px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+/* Efek muncul */
+.animated-img.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navigasi lebih menarik */
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav a:hover {
+  color: #ffd700;
+  border-bottom: 2px solid #ffd700;
+}
+
+/* Tambahkan background gradien */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+  color: #333;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+/* Card visual untuk proyek */
+.project {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px auto;
+  width: 80%;
+  max-width: 850px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.03);
+}
+
+/* Teks judul lebih besar */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+/* Paragraf lebih ramah visual */
+p {
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+.gallery {
+  column-count: 3;
+  column-gap: 20px;
+  padding: 100px;
+}
+
+.project-card {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+  border-radius: 15px;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    column-count: 1;
+  }
+}
+
+
+/* Layout mirip Wikipedia */
+.wiki-container {
+  display: flex;
+  padding: 30px;
+  gap: 30px;
+  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Sidebar TOC */
+.sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  background: #f8f9fa;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #3366cc;
+}
+
+/* Konten utama */
+.content {
+  flex: 1;
+  font-size: 1.1em;
+  line-height: 1.7;
+}
+
+.content h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+/* Infobox kanan */
+.infobox {
+  width: 250px;
+  background: #f0f8ff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.infobox img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.infobox-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .wiki-container {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .infobox {
+    width: 100%;
+  }
+}
+
+video {
+  border-radius: 35px; /* bisa 10px, 20px, atau 50% kalau mau lingkaran */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* opsional, kasih bayangan */
+  display: block;
+  margin: 20px auto; /* biar video center */
+}
